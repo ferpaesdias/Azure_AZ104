@@ -46,11 +46,11 @@ Opções de acesso ao Azure Cloud Shell:
 
 - No Portal do Azure:  [https://portal.azure.com/](https://portal.azure.com/)
 
-![Cloud Shell Portal Azure](../Imagens/CloudShell_PortalAzure.png)
+![Cloud Shell Portal Azure](./Imagens/CloudShell_PortalAzure.png)
 
 - Em snippets de código ao acessar Microsoft Learn:   
 
-![Cloud Shell MS Learn](../Imagens/CloudShell_MSLearn.png)
+![Cloud Shell MS Learn](./Imagens/CloudShell_MSLearn.png)
 
 <br>
 
@@ -66,7 +66,7 @@ As sessões do Cloud Shell terminam após 20 minutos de inatividade. Quando uma 
 
 Você pode persistir arquivos no Cloud Shell usando o Azure CloudDrive:
 
-![Cloud Shell Arquivos](../Imagens/CloudShell_Arquivos.png)
+![Cloud Shell Arquivos](./Imagens/CloudShell_Arquivos.png)
 
 <br>
 
@@ -77,7 +77,7 @@ O Cloud Shell também permite mapear um Compartilhamento de Arquivos de Armazena
 
 O Cloud Shell possui um editor de arquivos. Para usá-lo selecione o ícone `{}` ou use o comando `code arquivo.txt`:
 
-![Cloud Shell Editor](../Imagens/CloudShell_Editor.png)
+![Cloud Shell Editor](./Imagens/CloudShell_Editor.png)
 
 <br>
 
