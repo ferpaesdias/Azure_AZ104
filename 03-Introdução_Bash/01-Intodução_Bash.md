@@ -418,7 +418,7 @@ A saída do comando `ps aux` é idêntica à saída do comando `ps -ef`.
 
 <br>
 
-## Comando `w`
+### Comando `w`
 
 Exibe as informações sobre os usuários que estão conectados e suas atividades.
 
