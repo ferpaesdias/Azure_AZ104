@@ -165,3 +165,8 @@ O catálogo de soluções abrange milhares de ofertas em várias categorias do s
 O Assistente do Azure é um serviço gratuito, criado no Azure e que fornece recomendações sobre alta disponibilidade, segurança, desempenho, excelência operacional e custo. O Assistente do Azure analisa seus serviços implantados e sugere maneiras de melhorar seu ambiente nessas áreas. Você pode ver as recomendações no portal ou baixá-las no formato PDF ou CSV.
 
 Você pode acessar o Assistente do Azure, selecionando Assistente no menu de navegação ou pesquisar por ele no menu Todos os Serviços.
+
+<br>
+
+## Saiba mais
+[MS Learn: Manage services with the Azure portal](https://learn.microsoft.com/en-us/training/modules/tour-azure-portal/)   

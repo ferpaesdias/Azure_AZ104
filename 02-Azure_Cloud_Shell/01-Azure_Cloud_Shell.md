@@ -126,3 +126,7 @@ Você não deve usar o Azure Cloud Shell se:
 - Você precisa de armazenamento de regiões diferentes. Talvez seja necessário fazer backup e sincronizar esse conteúdo, pois apenas uma região pode ter o armazenamento alocado para o Azure Cloud Shell.
 - Você precisa abrir várias sessões ao mesmo tempo. O Azure Cloud Shell permite apenas uma instância no momento e não é adequado para trabalho simultâneo em várias assinaturas ou locatários.
 
+<br>
+
+## Saiba mais
+[MS Learn: Introduction to Azure Cloud Shell](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-cloud-shell/)   
