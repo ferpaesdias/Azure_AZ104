@@ -428,3 +428,94 @@ w
 
 <br>
 
+## Operadores de E/S de Bash
+
+<br>
+
+No Bash, os comandos podem ser combinados com operadores de E/S:
+
+- `<`: direcionar a entrada para uma fonte que não o teclado
+- `>`: direcionar a saída para um destino que não a tela 
+- `>>`: direcionar a saída para um destino que não a tela, mas acrescentando, em vez de substituir
+- `|`: canalizar a saída de um comando para a entrada de outro
+
+<br>
+
+Enviar a saída de um comando para um arquivo chamado listing.txt
+
+```bash
+ls > listing.txt
+```
+Se o arquivo já existir ele será substituído.
+
+<br>
+
+Enviar a saída de um comando para um arquivo chamado listing.txt inserindo a saída no final do arquivo sem substituí-lo
+
+```bash
+ls >> listing.txt
+```
+Se o arquivo já existir ele será substituído.
+
+<br>
+
+O `|` Redirecionar a saída de um comando para outro comando.
+
+Redirecionar a saída do comando `ps -ef` para o comando `head` para visualizar apenas a primeiras linhas
+
+```bash
+ps -ef | head
+```
+
+<br>
+
+Filtrar a saída do comando `ps -ef` para que mostre apenas a linhas que contenham a palavra `daemon`
+
+```bash
+ps -ef | grep daemon
+```
+
+<br>
+
+Usar o operador `<` para classificar o texto do arquivo `file.txt` em ordem alfabética
+
+```bash
+sort < file.txt
+```
+
+<br>
+
+Usar o operador `<` para classificar o texto do arquivo `file.txt` em ordem alfabética e salvar os dados classificados no arquivo `sorted_file.txt`
+
+```bash
+sort < file.txt > sorted_file.txt 
+```
+
+<br>
+
+Listar os tamanhos de VM disponíveis na região `westus` 
+
+```bash
+az vm list-sizes --location westus --output table
+```
+
+<br>
+
+Listar os tamanhos de VM disponíveis na região `westus` que contenham de "DS"
+
+```bash
+az vm list-sizes --location westus --output table | grep DS
+```
+
+<br>
+
+Listar os tamanhos de VM disponíveis na região `westus` que contenham de "DS V2"
+
+```bash
+az vm list-sizes --location westus --output table | grep DS.*_v2
+```
+
+<br>
+
+## Saiba mais
+[MS Learn: Introduction to Bash](https://learn.microsoft.com/en-us/training/modules/bash-introduction/)   
