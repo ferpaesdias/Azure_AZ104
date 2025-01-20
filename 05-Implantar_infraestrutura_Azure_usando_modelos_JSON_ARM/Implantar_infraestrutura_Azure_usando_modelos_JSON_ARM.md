@@ -83,5 +83,76 @@ Você também pode integrar seus modelos do ARM a ferramentas de CI/CD (integra�
 
 Para implantar um modelo local, será necessário ter a Azure CLI ou o Azure PowerShell instalado localmente. 
 
+<br>
+
 Primeiro, faça o login: 
 
+Azure CLI
+```azurecli
+az login
+```
+
+<br>
+
+PowerShell
+```powershell
+Connect-AzAccount
+```
+
+<br>
+
+Então defina o Resource Group. É possível criar um Resource Group ou usar um que já esteja definido. Neste exemplo, iremos criar um Resource Group novo
+
+
+Azure CLI
+```azurecli
+az group create \
+    --name {nome do Resource Group} \
+    --location "{location}"
+
+```
+
+<br>
+
+PowerShell
+```powershell
+New-AzResourceGroup `
+    -Name {nome do Resource Group} `
+    -Location "{location}"
+```
+
+<br>
+
+Para iniciar uma implantação de modelo no Resource Group, use o comando da Azure CLI `az deployment group create` ou o comando do Azure PowerShell `new-AzResourceGroupDeployment`.    
+Ambos os comandos exigem o Resource Group, a região e o nome da implantação para que você possa identificá-lo facilmente no histórico de implantação.   
+Para maior conveniência, o exercício cria uma variável que armazena o caminho para o arquivo de modelo.  Essa variável facilita a execução dos comandos de implantação porque você não precisa digitar novamente o caminho a cada vez que implantar.   
+
+Veja um exemplo:
+
+
+Azure CLI
+```azurecli
+templateFile="{provide-the-path-to-the-template-file}"
+az deployment group create \
+    --name blanktemplate \
+    --resource-group myResourceGroup \
+    --template-file $templateFile
+
+```
+
+<br>
+
+PowerShell
+```powershell
+$templateFile = "{provide-the-path-to-the-template-file}"
+New-AzResourceGroupDeployment `
+    -Name blanktemplate `
+    -ResourceGroupName myResourceGroup `
+    -TemplateFile $templateFile
+```
+
+<br>
+
+Use modelos vinculados para implantar soluções complexas. É possível dividir um modelo em vários outros e implantá-los por meio de um modelo principal. Quando você implanta o modelo principal, ele dispara a implantação do modelo vinculado. É possível armazenar e proteger o modelo vinculado usando um token SAS.
+
+Um pipeline de CI/CD automatiza a criação e a implantação de projetos de desenvolvimento, inclusive projetos de modelo do ARM. Os pipelines mais comuns usados para a implantação de modelo são o Azure Pipelines ou o GitHub Actions.
